@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="https://kit.fontawesome.com/1a0a950ce4.js" crossorigin="anonymous"></script>
+        <title>Sweet Bakes</title>
+    </head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="#"><img src="Images/SweetBakes.png"/></a>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav1" id="Nav">
+                <i class="fa fa-solid fa-xmark" onclick="MenuHide()"></i>
+                <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-duotone fa-bars" onclick="MenuShow()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>H<span style="color:pink">e</span>ll<span style="color:pink">o</span> Th<span style="color:pink">e</span>r<span style="color:pink">e</span>!</h1>
+        </div>
+    </section>
+    <section class="about">
+        <h1>About Us</h1>
+        <h3>Lorem ipsum dolor sit amet. Sed dolorum itaque hic porro veniam quo molestiae voluptas aut unde consequuntur. Est debitis facere cum incidunt dolor vel quas alias et doloremque natus eos reiciendis veniam eum voluptatem dolor.
+
+            Et modi consequuntur aut corrupti dolorem et iusto soluta et necessitatibus earum ad enim reprehenderit ut beatae error. Et dolorem sunt 33 delectus laborum non similique commodi sed eius facere est molestiae facilis est nesciunt magnam non debitis veniam. 33 itaque maiores At sapiente iure ad libero voluptatem qui adipisci voluptas.</h2>
+    </section>
+
+    <section class="recipe">
+        <h1>Recipes</h1>
+        <div class="grid-container"> 
+            <div class="grid-item"> 
+                <!-- <div class="card-inner"> -->
+                <div class="card-face card-face-front">
+                    <img src="Images/cake.jpg" width="400px" height="400px" class="image">
+                    <h1>Cheesecake</h1>
+                    <!-- <div class="overlay"> 
+                        <div class="text">Brownie</div>
+                    </div>  -->
+                    <p><button>View Recipe</button></p>
+                </div>
+                <div class="card-face card-face-back">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h1>Cheesecake</h1>
+                            <img src="Images/cake.jpg" width="400px" height="400px" class="image">
+                        </div>
+                        <div class="card-body">
+                            <p><span style="font-weight: bold;">Ingredients:</span> 1tsp suger, 1kg flour, 7tbsp butter, 1 cup cream cheese, 1 tsp salt,4 eggs.</p>
+                            <hr>
+                            <p><span style="font-weight: bold;">Recipe:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quaerat quasi veniam error ipsum non tenetur recusandae sint ullam harum est, ab, facere, explicabo eum quia soluta quidem delectus minima!</p>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+            <div class="grid-item"> 
+                <img src="Images/cake.jpg" width="400px" height="400px" class="image">
+                <h1>Cookie</h1>
+                <!-- <div class="overlay"> 
+                    <div class="text">Cookie</div>
+                </div>  -->
+                <p><button>View Recipe</button></p>
+            </div>
+            <div class="grid-item"> 
+                <img src="Images/cake.jpg" width="400px" height="400px" class="image">
+                <h1>Macaron</h1>
+                <!-- <div class="overlay">
+                    <div class="text">Macaron</div>
+                </div>  -->
+                <p><button>View Recipe</button></p>
+            </div>
+            <div class="grid-item"> 
+                <img src="Images/cake.jpg" width="400px" height="400px" class="image">
+                <h1>Tarte Banane</h1>
+                <!-- <div class="overlay"> 
+                    <div class="text">Tarte Banane</div>
+                </div>  -->
+                <p><button>View Recipe</button></p>
+            </div>
+            <div class="grid-item"> 
+                <img src="Images/cake.jpg" width="400px" height="400px" class="image">
+                <h1>Napoliten</h1>
+                <!-- <div class="overlay"> 
+                    <div class="text">Cheesecake</div>
+                </div>  -->
+                <p><button>View Recipe</button></p>
+            </div>
+            <div class="grid-item"> 
+                <img src="Images/cake.jpg" width="400px" height="400px" class="image">
+                <h1>Genoise</h1>
+                <!-- <div class="overlay"> 
+                    <div class="text">Genoise</div>
+                </div>  -->
+                <p><button>View Recipe</button></p>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        let nav1 = document.getElementById("Nav");
+        const className = 'opened';
+        function MenuShow(){
+            nav1.classList.add(className);
+        }
+        function MenuHide(){
+            let classList = nav1.classList;
+            
+
+            if (classList.contains(className)) {
+                classList.remove(className)
+            }
+        }
+
+        const card = document.querySelector('.grid-item');
+
+        card.addEventListener('click', function(){
+            card.classList.toggle('flipped');
+        })
+    </script>
+
+
+
+</body>
+</html>
